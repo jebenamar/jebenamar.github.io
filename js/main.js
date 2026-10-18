@@ -7,7 +7,7 @@ const finePointer = matchMedia("(pointer: fine)").matches;
 
 /* ================= DATA ================= */
 const JOBS = [
-  { c: "Groupe Agrica", d: "Depuis mars 2019", role: "Lead développeur", p: "Assurance agricole", tags: ["drupal", "js"], open: true,
+  { c: "Groupe Agrica", d: "Depuis mars 2019", role: "Lead développeur (indépendant depuis 2024)", p: "Assurance agricole", tags: ["drupal", "js"], open: true,
     r: ["Application Nuxt.js de monitoring des flux et de gestion des rejeux de flux",
         "Refonte du site agrica.fr : Drupal headless + front Next.js",
         "Application Next.js de gestion des échanges entre partenaires, authentification Keycloak",
