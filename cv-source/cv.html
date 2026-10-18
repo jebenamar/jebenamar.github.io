@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>CV — Jamal Eddine BENAMAR</title>
+<style>
+@font-face{font-family:"Inter";font-weight:400 600;src:url(fonts/Inter.woff2) format("woff2")}
+@font-face{font-family:"Space Grotesk";font-weight:500 700;src:url(fonts/SpaceGrotesk.woff2) format("woff2")}
+@page{size:A4;margin:0}
+:root{--ink:#14121f;--muted:#5f5b70;--line:#e6e3ee;--side:#14121f;--side-fg:#ece9f7;--side-muted:#9f9ab5;--accent:#6d4aff;--accent2:#00b39b}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff}
+body{font:400 9.3pt/1.45 "Inter","Segoe UI",sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;overflow:hidden;position:relative;display:grid;page-break-after:always;break-after:page}
+.page:last-child{page-break-after:auto;break-after:auto}
+.p1{grid-template-columns:66mm 1fr}
+.p2{grid-template-columns:1fr}
+h1,h2,h3,.disp{font-family:"Space Grotesk","Segoe UI",sans-serif}
+
+/* sidebar */
+aside{background:var(--side);color:var(--side-fg);padding:14mm 8mm 10mm}
+.photo{width:34mm;height:34mm;border-radius:50%;margin:0 auto 5mm;background:url(../images/portrait-photo.jpg) 50% 18%/cover;box-shadow:0 0 0 1.2mm var(--side),0 0 0 1.7mm var(--accent)}
+aside h2{font-size:8pt;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);margin:5.5mm 0 2.4mm;font-weight:700}
+aside ul{list-style:none}
+.contact li{display:flex;gap:2.5mm;margin-bottom:1.8mm;font-size:8.6pt;word-break:break-word}
+.contact b{color:var(--side-muted);font-weight:500;min-width:4mm}
+.skills li{margin-bottom:2.6mm}
+.skills strong{display:block;font-size:8.4pt;font-weight:600;margin-bottom:1mm}
+.tags{display:flex;flex-wrap:wrap;gap:1.2mm}
+.tags span{font-size:7.6pt;padding:.5mm 2mm;border-radius:9px;background:rgba(255,255,255,.08);border:.2mm solid rgba(255,255,255,.12)}
+.tags span.hi{background:var(--accent);border-color:var(--accent);color:#fff}
+.plain li{font-size:8.6pt;margin-bottom:1.6mm;padding-left:3mm;position:relative}
+.plain li::before{content:"";position:absolute;left:0;top:1.9mm;width:1.2mm;height:1.2mm;border-radius:50%;background:var(--accent2)}
+.edu li{margin-bottom:2.4mm;font-size:8.4pt}
+.edu .y{display:block;font:700 8pt "Space Grotesk";color:var(--accent2)}
+.edu small{color:var(--side-muted);font-size:7.8pt}
+
+/* main */
+main{padding:14mm 12mm 10mm 11mm}
+.p2 main{padding:13mm 14mm 10mm}
+header h1{font-size:25pt;line-height:1;letter-spacing:-.02em;font-weight:700}
+header h1 span{color:var(--accent)}
+header .title{font:600 11.5pt "Space Grotesk";margin-top:2.4mm;color:var(--ink)}
+header .sub{font-size:8.8pt;color:var(--muted);margin-top:1mm}
+.profile{margin:5mm 0 1mm;font-size:9.3pt;color:#2b2838;border-left:.9mm solid var(--accent);padding:.6mm 0 .6mm 3.5mm}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm;margin:5mm 0 1mm}
+.kpis div{border:.25mm solid var(--line);border-radius:3mm;padding:2.4mm 3mm}
+.kpis b{display:block;font:700 15pt/1 "Space Grotesk";color:var(--accent)}
+.kpis span{font-size:7.8pt;color:var(--muted)}
+main h2{display:flex;align-items:center;gap:3mm;font-size:9pt;letter-spacing:.16em;text-transform:uppercase;margin:6mm 0 3mm;color:var(--ink)}
+main h2::after{content:"";flex:1;height:.25mm;background:var(--line)}
+.job{margin-bottom:3.6mm;break-inside:avoid}
+.job .head{display:flex;justify-content:space-between;align-items:baseline;gap:4mm}
+.job h3{font-size:11pt;font-weight:700}
+.job h3 small{font:500 8.8pt "Inter";color:var(--muted);margin-left:1.5mm}
+.job time{font-size:8pt;color:var(--accent);font-weight:600;white-space:nowrap}
+.job .role{font-size:8.8pt;color:var(--muted);margin:.4mm 0 1.2mm}
+.job ul{padding-left:4mm}
+.job li{margin-bottom:.7mm}
+.job li::marker{color:var(--accent)}
+.job li b{font-weight:600}
+.stack{font-size:7.8pt;color:var(--muted);margin-top:1.2mm}
+.stack b{color:var(--ink);font-weight:600}
+.feature{border:.3mm solid var(--line);border-radius:3.5mm;padding:4mm 4.5mm;background:linear-gradient(135deg,#f6f3ff,#fff 60%)}
+.feature .new{display:inline-block;font:700 6.8pt "Inter";letter-spacing:.08em;color:#fff;background:var(--accent);padding:.4mm 1.6mm;border-radius:2mm;margin-right:1.2mm;vertical-align:1px}
+.compact .job{margin-bottom:2.6mm}
+.compact .job ul{display:none}
+.compact .job .role{margin-bottom:.3mm}
+table.older{width:100%;border-collapse:collapse;font-size:8.3pt}
+.older td{padding:1.5mm 2mm 1.5mm 0;border-bottom:.2mm solid var(--line);vertical-align:top}
+.older td:first-child{font-weight:600;width:34mm}
+.older td:nth-child(2){color:var(--accent);font-weight:600;width:25mm;white-space:nowrap}
+.older td:last-child{color:var(--muted);width:33mm;text-align:right}
+.p2 .band{position:absolute;left:0;top:0;bottom:0;width:4mm;background:linear-gradient(var(--accent),var(--accent2))}
+footer{position:absolute;bottom:6mm;right:12mm;font-size:7.4pt;color:#a6a2b5}
+</style>
+</head>
+<body>
+
+<!-- ================= PAGE 1 ================= -->
+<section class="page p1">
+  <aside>
+    <div class="photo" role="img" aria-label="Photo de Jamal Eddine Benamar"></div>
+
+    <h2>Contact</h2>
+    <ul class="contact">
+      <li><b>✉</b>jebenamar@gmail.com</li>
+      <li><b>☏</b>+33 6 41 80 31 13</li>
+      <li><b>⌂</b>Chauray (79), France</li>
+      <li><b>↗</b>jebenamar.github.io</li>
+    </ul>
+
+    <h2>Expertises</h2>
+    <ul class="skills">
+      <li><strong>CMS &amp; back-end</strong><div class="tags"><span class="hi">Drupal 7 / 8 / 9 / 10 / 11</span><span class="hi">Drupal headless</span><span>PHP</span><span>Symfony 1 → 4</span><span>eZ Platform</span></div></li>
+      <li><strong>Front-end</strong><div class="tags"><span class="hi">Next.js</span><span class="hi">Nuxt.js</span><span>React</span><span>Vue.js</span><span>Angular</span><span>Twig</span><span>HTML / CSS</span></div></li>
+      <li><strong>CI/CD &amp; qualité</strong><div class="tags"><span class="hi">Jenkins</span><span>Maven</span><span>SonarQube</span></div></li>
+      <li><strong>Sécurité &amp; données</strong><div class="tags"><span>Keycloak (SSO)</span><span>Elasticsearch</span><span>Solr</span><span>Oracle</span></div></li>
+      <li><strong>E-commerce</strong><div class="tags"><span>Prestashop</span><span>Magento</span></div></li>
+    </ul>
+
+
+    <h2>Formation</h2>
+    <ul class="edu">
+      <li><span class="y">2008</span>Licence Pro — Développement &amp; Administration des Bases de Données<br><small>Faculté des Sciences, Oujda</small></li>
+      <li><span class="y">2007</span>DEUG Sciences Mathématiques &amp; Informatique<br><small>Faculté des Sciences, Oujda</small></li>
+      <li><span class="y">2004</span>Baccalauréat Sciences Mathématiques</li>
+    </ul>
+
+    <h2>Langues</h2>
+    <ul class="plain">
+      <li>Arabe</li>
+      <li>Français</li>
+      <li>Anglais — A1</li>
+    </ul>
+  </aside>
+
+  <main>
+    <header>
+      <h1>Jamal Eddine <span>BENAMAR</span></h1>
+      <div class="title">Lead développeur · Expert Drupal &amp; front Next.js / Nuxt.js</div>
+      <div class="sub">Plus de 15 ans d'expérience en développement web</div>
+    </header>
+
+    <p class="profile">Passionné, curieux et rigoureux, je mets une solide expertise technique au service de projets web exigeants : de l'analyse du besoin à l'industrialisation CI/CD, en passant par des architectures découplées Drupal headless / Next.js. Sens du relationnel et fort esprit d'équipe.</p>
+
+    <div class="kpis">
+      <div><b>15+</b><span>ans d'expérience</span></div>
+      <div><b>25+</b><span>projets livrés</span></div>
+      <div><b>7+</b><span>ans chez Groupe Agrica</span></div>
+    </div>
+
+    <h2>Expérience</h2>
+
+    <div class="job feature">
+      <div class="head"><h3>Groupe Agrica <small>Assurance agricole</small></h3><time>Mars 2019 — aujourd'hui</time></div>
+      <div class="role">Lead développeur</div>
+      <ul>
+        <li><span class="new">NOUVEAU</span><b>Monitoring des flux</b> — application Nuxt.js de supervision et de gestion des rejeux de flux.</li>
+        <li><span class="new">NOUVEAU</span><b>Refonte d'agrica.fr</b> — architecture découplée Drupal headless + front Next.js.</li>
+        <li><span class="new">NOUVEAU</span><b>Échanges partenaires</b> — application Next.js avec authentification Keycloak.</li>
+        <li><b>Industrialisation</b> — initialisation des configurations Maven, Jenkins et SonarQube des 3 nouveaux projets.</li>
+        <li>Création du site public, du site privé et d'un module de vente de produits d'assurance (portail partenaire).</li>
+      </ul>
+      <div class="stack"><b>Stack :</b> Next.js · Nuxt.js · React · Vue.js · Drupal 8 → 11 / headless · Keycloak · Jenkins · Maven · SonarQube · Twig</div>
+    </div>
+
+    <div class="job">
+      <div class="head"><h3>Renault Dacia UK <small>E-commerce automobile</small></h3><time>2018 · 3 mois</time></div>
+      <div class="role">Développeur back / front</div>
+      <ul><li>Services du tunnel d'achat pour le front Angular, import de stock, corrections front.</li></ul>
+      <div class="stack"><b>Stack :</b> Symfony 4 · Angular 4</div>
+    </div>
+
+    <div class="job">
+      <div class="head"><h3>Groupe-e <small>Fournisseur d'électricité</small></h3><time>2018 · 2 mois</time></div>
+      <div class="role">Lead développeur</div>
+      <ul><li>Module d'estimation d'installation de panneaux photovoltaïques.</li></ul>
+      <div class="stack"><b>Stack :</b> Drupal 8 · Twig</div>
+    </div>
+
+    <div class="job">
+      <div class="head"><h3>Generali <small>Agences digitales</small></h3><time>2018 · 2 mois</time></div>
+      <div class="role">Lead développeur Drupal</div>
+      <ul><li>Analyse et chiffrage, environnement de dev, routing personnalisé agence/ville, fil d'Ariane sur mesure.</li></ul>
+      <div class="stack"><b>Stack :</b> Drupal 8 · Twig</div>
+    </div>
+    <div class="job">
+      <div class="head"><h3>Crédit Agricole <small>Refonte credit-agricole.com</small></h3><time>2017 · 4 mois</time></div>
+      <div class="role">Développeur</div>
+      <ul><li>Développement backend et moteur de recherche.</li></ul>
+      <div class="stack"><b>Stack :</b> eZ Platform · Solr</div>
+    </div>
+  </main>
+</section>
+
+<!-- ================= PAGE 2 ================= -->
+<section class="page p2">
+  <div class="band"></div>
+  <main>
+    <h2 style="margin-top:0">Expérience (suite)</h2>
+
+
+    <div class="job">
+      <div class="head"><h3>CEDEO <small>Refonte enviedesalledebain.fr</small></h3><time>2017 · 6 mois</time></div>
+      <div class="role">Développeur</div>
+      <ul><li>Moteur de recherche, service de prise de rendez-vous, import du catalogue vers Elasticsearch.</li></ul>
+      <div class="stack"><b>Stack :</b> Drupal 8 · Elasticsearch</div>
+    </div>
+
+    <div class="job">
+      <div class="head"><h3>Siblu <small>Mobile homes — siblu.fr</small></h3><time>2016 · 9 mois</time></div>
+      <div class="role">Développeur</div>
+      <ul><li>Refonte du site, intranet social des villages, web services de l'application mobile (Fun-pass).</li></ul>
+      <div class="stack"><b>Stack :</b> Drupal 7</div>
+    </div>
+
+    <div class="job">
+      <div class="head"><h3>Nestlé — Vittel <small>Jeu en ligne Kung Fu Panda 3</small></h3><time>2015 · 2 mois</time></div>
+      <div class="role">Développeur</div>
+      <ul><li>Module d'upload d'images (Cropyt) et site mobile.</li></ul>
+      <div class="stack"><b>Stack :</b> Drupal 7</div>
+    </div>
+
+    <div class="job">
+      <div class="head"><h3>Autodistribution <small>Refonte autodistribution.fr</small></h3><time>11 mois</time></div>
+      <div class="role">Lead développeur</div>
+      <ul><li>Moteur de recherche géolocalisé (Google Maps), import / export des tarifs, gestion des événements.</li></ul>
+      <div class="stack"><b>Stack :</b> Symfony 1.4 · Oracle</div>
+    </div>
+
+    <div class="job">
+      <div class="head"><h3>Merck <small>eoperations.msd.com</small></h3><time>2009 · 20 mois</time></div>
+      <div class="role">Lead développeur</div>
+      <ul><li>Import / export de données, intégration LDAP, rédaction des spécifications techniques.</li></ul>
+      <div class="stack"><b>Stack :</b> ActiveCollab · Smarty</div>
+    </div>
+
+    <h2>Autres missions · 2009 — 2015</h2>
+    <table class="older">
+      <tr><td>Picwic</td><td>2015 · 2 mois</td><td>Bundles retours et remboursements (e-commerce)</td><td>Symfony 2</td></tr>
+      <tr><td>Alice Délice</td><td>2015 · 2 mois</td><td>Lead dév — module click &amp; collect</td><td>Prestashop 1.5</td></tr>
+      <tr><td>McCover</td><td>2015 · 3 mois</td><td>Lead dév — modules livraison et paiement</td><td>Prestashop 1.6</td></tr>
+      <tr><td>Des sols et des murs</td><td>2015 · 1 mois</td><td>Calculateur de quantité de peinture</td><td>Prestashop 1.6</td></tr>
+      <tr><td>Guitel</td><td>2015 · 1 mois</td><td>Import clients, adresses et commandes</td><td>Prestashop 1.5</td></tr>
+      <tr><td>BMW</td><td>2 mois</td><td>Bundle de contact bmw.fr</td><td>Symfony 2</td></tr>
+      <tr><td>SMI — Mutuelle</td><td>2011 · 6 mois</td><td>Lead dév — paiement Atos, backend, tarifs</td><td>Symfony 1.4</td></tr>
+      <tr><td>Jaeger-LeCoultre</td><td>2011 · 3 mois</td><td>Lead dév — refonte, module contact via web service</td><td>Symfony 1.4</td></tr>
+      <tr><td>Croquetteland</td><td>2011 · 1 mois</td><td>Intégration et surcharge catalogue</td><td>Magento 1.4</td></tr>
+      <tr><td>SIA</td><td>2011 · 1 mois</td><td>Carrousel, import historique de commandes</td><td>Magento 1.4</td></tr>
+      <tr><td>Mucim-Stanislas</td><td>2011 · 1 mois</td><td>Module d'estimation de devis</td><td>Symfony 1.0</td></tr>
+      <tr><td>1001 Libraires</td><td>2010 · 11 mois</td><td>Refonte, moteur de recherche, cas de test</td><td>Magento 1.4</td></tr>
+      <tr><td>France Équipement</td><td>2010 · 5 mois</td><td>Site multilingue fr / de, e-mails transactionnels</td><td>Symfony 1.0</td></tr>
+      <tr><td>Kap'stages</td><td>2009 · 7 mois</td><td>Backend inscriptions, statistiques, recherche Zend</td><td>Symfony 1.2</td></tr>
+    </table>
+  </main>
+  <footer>Jamal Eddine BENAMAR · CV · 2 / 2</footer>
+</section>
+
+</body>
+</html>
